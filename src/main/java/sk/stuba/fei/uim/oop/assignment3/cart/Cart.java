@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import sk.stuba.fei.uim.oop.assignment3.cart.ProductInCart;
+
 
 import javax.persistence.*;
 import java.util.ArrayList;

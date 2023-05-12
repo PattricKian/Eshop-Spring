@@ -1,7 +1,6 @@
 package sk.stuba.fei.uim.oop.assignment3.product;
 
 import sk.stuba.fei.uim.oop.assignment3.exceptions.NotFoundException;
-import sk.stuba.fei.uim.oop.assignment3.product.IntResponse;
 import java.util.List;
 
 public interface IProductService {

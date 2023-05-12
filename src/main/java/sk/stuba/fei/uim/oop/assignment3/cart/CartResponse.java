@@ -1,7 +1,7 @@
 package sk.stuba.fei.uim.oop.assignment3.cart;
 
 import lombok.Getter;
-import sk.stuba.fei.uim.oop.assignment3.cart.ProductInCart;
+
 
 import java.util.List;
 
