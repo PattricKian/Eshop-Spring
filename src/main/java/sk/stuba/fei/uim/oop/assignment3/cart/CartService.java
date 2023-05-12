@@ -86,6 +86,7 @@ public class CartService implements ICartService {
             Product p = this.productService.getById(product.getProductId());
             total += p.getPrice() * product.getAmount();
         }
+        cart.setPayed(true);
         return String.format("%d", total);
     }
 

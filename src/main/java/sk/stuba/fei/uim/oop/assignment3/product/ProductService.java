@@ -41,14 +41,17 @@ public class ProductService implements IProductService {
 
     @Override
     public Product update(Long id, ProductRequest request) throws NotFoundException {
-        Product existingProduct = getById(id);
-        if(request.getName() != null) {
-            existingProduct.setName(request.getName());
-        }
-        if(request.getDescription() != null) {
-            existingProduct.setDescription(request.getDescription());
-        }
-        return this.repository.save(existingProduct);
+        return Optional.ofNullable(getById(id))
+                .map(existingProduct -> {
+                    if (request.getName() != null) {
+                        existingProduct.setName(request.getName());
+                    }
+                    if (request.getDescription() != null) {
+                        existingProduct.setDescription(request.getDescription());
+                    }
+                    return repository.save(existingProduct);
+                })
+                .orElseThrow(() -> new NotFoundException());
     }
 
     @Override
